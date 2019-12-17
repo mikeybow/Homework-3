@@ -2,10 +2,11 @@ var hasBigLetter = false;
 var hasSmallLetter = false;
 var hasNumber = false;
 var isLength = false;
+var hasSpecial = false;
 var hasSpecialCaseLetter = '!"()*+,-./:;<=>?@[]^_`{|}~';
 
 function validateLength(charLength) {
-    if (charLength.length >= 8 && charLength <= 128) {
+    if (charLength.length >= 8 && charLength.length <= 128) {
         return isLength = true;
     };
 };
@@ -39,7 +40,7 @@ function validateSpecialChar (passwordSpecialChar,special) {
     for(var l = 0; l < passwordSpecialChar.length; l++) {
         for(var m = 0; m < special.length; m++) {
             if(passwordSpecialChar[l] === special[m]) {
-                return hasSpecialCaseLetter = true;
+                return hasSpecial = true;
             };
         };
     };
@@ -51,8 +52,13 @@ document.querySelector(".GeneratePasswordButton").addEventListener('click', func
     validateLower(userPassword);
     validateNumber(userPassword);
     validateSpecialChar(userPassword, hasSpecialCaseLetter);
+    validateLength(userPassword);
+    
+    console.log(hasBigLetter, hasSmallLetter, hasNumber, hasSpecial, isLength)
+
     console.log(userPassword);
-    if(hasBigLetter && hasSmallLetter && hasNumber && hasSpecialCaseLetter) {
+    
+    if(hasBigLetter && hasSmallLetter && hasNumber && hasSpecial && isLength) {
         alert('You have entered a valid password')
     }
     else {
@@ -62,7 +68,8 @@ document.querySelector(".GeneratePasswordButton").addEventListener('click', func
     hasBigLetter = false;
     hasSmallLetter = false;
     hasNumber = false;
-    hasSpecialCaseLetter = false;
+    hasSpecial = false;
+    isLength = false
 
 });
 
