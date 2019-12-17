@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html lang="en-us">
+ 
   <head>
     <meta charset="UTF-8">
     <title>Password Generator</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   </head>
+  
   <body>
-      <h1>Password Generator</h1>
-<div class="container">
+
+      <h1><center>Password Generator</center></h1>
+
+      <div class="container">
     <div class="main-section">
-    <h2>Generate Password</h2>
-    <hr>
-    <textarea name="Your Secure Password">Your Secure Password</textarea>
+    
+        <h2>Generate a Password</h2>
+    
+        <div class="hr"><hr></div>
+    
+    <textarea placeholder="Your Secure Password" id="userPass"></textarea>
+    <div>
+        <hr>
+    <button type="button" class="GeneratePasswordButton">Generate Password</button>
+    <button type="button" class="CopytoClipboard">Copy to Clipboard</button>
 </div>
 </div>
+
+</div>
+
     <script>
 
      
 
     </script>
+    
     <script src="./script.js"></script>
-  </body>
+  
+   </body>
+
 </html>

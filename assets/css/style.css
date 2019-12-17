@@ -10,6 +10,7 @@
     font-size: 15px;
     padding: 20px 30px 10px 30px;
     margin-top: 30px;
+    height: 400px;
 }
 
 
@@ -17,11 +18,47 @@ body {
     background-color: gainsboro;
 }
 
+.CopytoClipboard {
+    float: right;
+    background-color: gray;
+    color: white;
+    border-radius: 20px;
+    font-size: 20px;
+    width: 25%;
+    border-style: none;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.GeneratePasswordButton {
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    width: 25%;
+    border-style: none;
+    padding: 10px;
+    margin-top: 20px;
+}
+
 
 
 
 textarea {
     height: 200px;
-    width: 900px;
+    width: 890px;
     text-align: center;
+    color: gray;
+    font-size: 20px;
+    border: dashed;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+h2 {
+    margin-bottom: 30px;
 }
